@@ -34,30 +34,52 @@ class Program
     //}
 
 
-    //// !Exercise 1 - Multiplication *2 and *10
+    ////// !Exercise 2 - square and cube of number
+    //static void Main(string[] args)
+    //{
+    //    Console.WriteLine("Write a number which will be squared and cubed");
+    //    int number = int.Parse(Console.ReadLine());
+        
+        
+    //    Console.WriteLine("Number {0} squared is {1}", number,  Square(number));
+    //    Console.WriteLine("Number {0} cubedd is {1}", Cube(number));
+    
+    //}
+
+    //public static int Square(int numbers)
+    //{
+    //    int squareNumber = numbers * numbers;
+
+    //    return squareNumber;
+    //}
+
+    //public static int Cube (int number)
+    //{
+    //    int cubeNumber = Square(number) * number;
+        
+    //    return cubeNumber;
+    //}
+
+
+    //// !Exercise 3 - Sum many of parameters
     static void Main(string[] args)
     {
-        Console.WriteLine("Write a number which will be squared and cubed");
-        int number = int.Parse(Console.ReadLine());
+        int[] newArray = {1, 2, 3, 4, 5};
+
+        Console.WriteLine(Sum(newArray));
+        Console.WriteLine(Sum(5));
+    }
+
+    public static int Sum (params int[] numbers)
+    {
+        int answer = 0;
+        for (int i = 0; i < numbers.Length; i++)
+        {
+            answer += numbers[i];
+        }
         
-        
-        Console.WriteLine("Number {0} squared is {1}", number,  Square(number));
-        Console.WriteLine("Number {0} cubedd is {1}", Cube(number));
+        return answer;
+    }
+
     
-    }
-
-    public static int Square(int numbers)
-    {
-        int squareNumber = numbers * numbers;
-
-        return squareNumber;
-    }
-
-    public static int Cube (int number)
-    {
-        int cubeNumber = Square(number) * number;
-        
-        return cubeNumber;
-    }
-
 }
